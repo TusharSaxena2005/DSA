@@ -9,6 +9,7 @@ import java.util.TreeSet;
 
 public class Collection {
     public List<Integer> getArrayList() {
+        // ArrayList is a Dynamic size array but slower than array
         List<Integer> data = new ArrayList<Integer>();
         data.add(1);
         data.add(2);
@@ -20,6 +21,7 @@ public class Collection {
     }
 
     public Set<Integer> getHashSet() {
+        // HashSet automatically remove duplicate element
         Set<Integer> data2 = new HashSet<>();
         data2.add(81);
         data2.add(72);
@@ -31,6 +33,7 @@ public class Collection {
     }
 
     public Set<Integer> getTreeSet() {
+        // TreeSet automatically store element in a sorted manner
         Set<Integer> data3 = new TreeSet<Integer>();
         data3.add(81);
         data3.add(72);
@@ -42,6 +45,7 @@ public class Collection {
     }
 
     public Map<String, Integer> getHashMap() {
+        // HashMap has fast retreving data O(1) and dynamic resizing
         Map<String, Integer> data4 = new HashMap<>();
         data4.put("A", 1);
         data4.put("B", 2);
