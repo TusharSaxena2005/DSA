@@ -7,7 +7,7 @@ public class SelectionSort {
     }
 
     public static int[] selectionSort(int arr[]) {
-        int temp = 0;
+        int temp;
         for (int i = 0; i < arr.length; i++) {
             int maxNum = 0;
             for (int j = 0; j < arr.length - i; j++) {
