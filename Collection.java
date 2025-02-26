@@ -9,7 +9,7 @@ import java.util.TreeSet;
 public class Collection {
     public List<Integer> getArrayList() {
         // ArrayList is a Dynamic size array but slower than array
-        List<Integer> data = new ArrayList<Integer>();
+        List<Integer> data = new ArrayList<>();
         data.add(1);
         data.add(2);
         data.add(3);
@@ -33,7 +33,7 @@ public class Collection {
 
     public Set<Integer> getTreeSet() {
         // TreeSet automatically store element in a sorted manner
-        Set<Integer> data3 = new TreeSet<Integer>();
+        Set<Integer> data3 = new TreeSet<>();
         data3.add(81);
         data3.add(72);
         data3.add(53);
