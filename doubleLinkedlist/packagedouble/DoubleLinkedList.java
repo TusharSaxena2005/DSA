@@ -1,12 +1,14 @@
-package package1;
+package packagedouble;
 
-public class Linkedlist {
+public class DoubleLinkedList {
     Node head;
 
     public void add(int data) {
         Node node = new Node();
         node.data = data;
+        node.previous = null;
         node.next = null;
+
         if (head == null) {
             head = node;
         } else {
@@ -15,20 +17,26 @@ public class Linkedlist {
                 n = n.next;
             }
             n.next = node;
+            node.previous = n;
         }
     }
 
     public void insert(int data) {
         Node node = new Node();
         node.data = data;
+        node.previous = null;
         node.next = head;
+        head.previous = node;
         head = node;
+
     }
 
     public void insertAt(int index, int data) {
         Node node = new Node();
         node.data = data;
+        node.previous = null;
         node.next = null;
+
         if (index == 0) {
             insert(data);
         } else {
@@ -38,6 +46,7 @@ public class Linkedlist {
             }
             node.next = n.next;
             n.next = node;
+            node.previous = n;
         }
     }
 
@@ -46,12 +55,13 @@ public class Linkedlist {
             head = head.next;
         } else {
             Node n = head;
-            Node n1 = null;
             for (int i = 0; i < index - 1; i++) {
                 n = n.next;
             }
-            n1 = n.next;
-            n.next = n1.next;
+            Node n1 = n.next;
+            Node n2 = n1.next;
+            n.next = n2;
+            n2.previous = n;
             n1 = null;
         }
     }
@@ -64,5 +74,4 @@ public class Linkedlist {
         }
         System.out.println(n.data);
     }
-
 }
